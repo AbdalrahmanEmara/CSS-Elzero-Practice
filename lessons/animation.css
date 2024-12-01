@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --len: 50px
+}
+
+.anime {
+    width: var(--len);
+    height: var(--len);
+    background-color: rgba(255, 0, 0, 0.203);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(-0.5 * var(--len));
+    margin-left: calc(-0.5 * var(--len));
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid calc(0.05 * var(--len)) red;
+    border-left-color: transparent;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+.anime:hover {
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1turn);
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+    }
+}
+
+.two {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin:60px auto;
+    /*animation-name: coloring;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    */
+    animation: coloring 3s linear 2s infinite reverse;
+}
+.two:hover {
+    animation-play-state: paused;
+}
+
+@keyframes coloring {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: black;
+    }
+}

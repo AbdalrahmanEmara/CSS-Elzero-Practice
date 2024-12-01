@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.a1 {
+    width: 400px;
+    height: 200px;
+    margin: 60px auto;
+    text-align: center;
+    background-color: #eee;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+}
+.a1:hover {
+    margin-top: 30px;
+}
+.p2 {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ccc;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: linear;
+}
+.a1:hover .p2 {
+    margin-top: 40px;
+}
+
+.a2 {
+    background-color: #ccc !important;
+    color: black !important;
+    border: none !important;
+    width: 400px;
+    font-size: 20px !important;
+    margin: auto;
+    position: relative;
+    text-indent: -2000px;
+}
+.a2::before {
+    content: "Elzero";
+    position: absolute;
+    text-indent: 0;
+    left: 190px;
+}
+
+/* :root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+} */
+.a3 div {
+    color: var(--mainColor, #ea3323);
+    border: 2px solid var(--mainColor, black);
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+}

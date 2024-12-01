@@ -1,0 +1,724 @@
+Inline Style ==> strongest Style(do the final result) but not recommended to use
+final style is strongest Style
+
+LESSON 4
+    Identifier ==> like (class, id) ==> which Identify the element
+               ==> dont start with number (1test is wrong Identifier)
+               
+<!-- Inline Style  -->
+    <!-- <p style="color: blueviolet;">The inline paragraph</p> -->
+padding: 10px;
+width: 70%;
+margin: auto;
+border 9
+    border-width: 10px;
+    border-color: rgb(180, 125, 4) rgb(128, 43, 0);
+    border-style: solid;
+    border: 10px solid blueviolet;
+outline 10
+    outline: 10px solid maroon;
+    outline-style: solid;
+    can not edit on line by line
+    everything you can do by outline, you can use border
+Display Block, Inline, Inline-Block 11
+    Block: - Take Full width if no width
+           - Add Line Break
+           - Respect padding, margin, width, height
+
+    Inline: - Do not Respect width, height
+            - Respect padding and margin ( just Left + Right )
+            - Do not add line Break
+            - Allow elements before and after it
+
+    Inline-Block: - Allow elements before and after it
+                  - Respect padding, margin, width, height
+Display & visibility elements 12: 
+                        - display: none; (to disappear the element)
+                        - visibility: hidden (disappear the element but still his location save)
+Grouping & Multiple Selectors 13: 
+                                    .one,
+                                    .two,
+                                    .three,
+                                    .four,
+                                    p {
+                                        background-color: #eee;
+                                        margin: 10px 0px;
+                                        padding: 10px;
+                                    }                       
+Nesting 14: - <div>
+                <h2>Title</h2>
+                <p>Paragraph Inside div</p>
+                <p class="cl">Paragraph Inside div with class</p>
+            </div>
+            <p class="cl">Paragraph Outside div</p>
+            div .cl {
+                color: blue;
+            } see just (Paragraph Inside div with class)
+Dimentions width & height 15: min-width: 400px;
+                              max-width: 600px;
+                              width: fit-content;
+Overflow X and Y 16: default value: visible;
+                     hidden: make the Overflow hide when out the limits of div (width & height)
+                     scroll: make scroll of content.
+                     auto: make it visible if it not Overflow or scroll of skip limits.
+                     overflow-x: hidden ==> make y scroll and hide X
+                     overflow-y: hidden ==> make x scroll and hide Y
+Text color & shadow 17:
+    Text color
+     - background-color
+     - color
+    Text shadow
+     Syntax => text-shadow: H-Shadow V-Shadow Blur Color
+Text Alignment 18:
+    div {
+        text-align: center; (left or center or Right)
+        direction: ltr; (ltr or rtl)
+    }
+    img {
+        vertical-align: middle; (the position of text next to image)
+    }
+Text Decoration, Transform 19:
+    text-decoration: (none or overline, underline, )
+    text-transform: (capitalize, lowercase, uppercase)
+Text-Spacing 20: 
+    - letter-spacing: 2px;
+    - text-indent: 100px; (the space that is empty before text in the line)
+                                  hello (with text-indent)
+        hello (normal)
+    - line-height: 1.6;
+    - word-spacing + wraping + 
+    - white-space: nowrap; (when width is end the change of paragraph not end line, but out the box)
+    - word-break: (break-all or break-word)
+Text Overflow & Use Cases 21: 
+    div:hover {
+        overflow: visible;
+    } (do something when you point the div with mouse)
+    overflow: hidden;
+    text-overflow: ellipsis; (set ... in the final of text before hide the change of the text)
+Inheritance 22:
+    - element inherites properities that he does not have.
+    - some properities do not inherite like (padding, margin)
+    - some properities inherite like (font-size)
+    - any_properity: inherit; (element will take the prop from the father)
+Typography Font Family 23:
+    - any two or more words with each other set them in double quots or, will play as two elements.
+    .d1 {
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    .d2 {
+       font-family: 'Times New Roman', Times, serif;
+    }
+    // to get new font online (take name of font family and set it in css file)
+                         then (take his link and set it in head)
+Typography Font Size and CSS Units 24:
+    CSS Units:
+        px
+        em => time (kem = k*(father size of this element))
+        rem => root time (krem = k*(html size of this element)) 
+        percentage => percentage of father size
+        vw => View Port Width (percentage of page width) 1vw (1% of page width)
+
+    Read:
+        vmin
+        vh
+
+    1em = 16px this is wrong.
+    default font size of web page is 16px
+
+    kem = k*(father size of this element)
+        <div>aaa<span>bb</span></div>
+        if(div size = 20px)
+        ,span size = 2em = 2*20 = 40px;
+
+    font-size: large = 18px;
+
+Typography-Font Style, Variant, Weight 25:
+    font-style: (italic, oblique, normal)
+    font-variant: small-caps;
+    font-weight: (bold, normal)
+
+Mouse Curser 26:
+    cursor: (pointer, grab, move)
+Float And Clear 27:
+    Clear: clear the previous Float
+    .clear {
+        clear: both;
+    }
+    width: 25%;
+    float: left;
+Master the Css Calculation 28:
+    content width is: 100%
+    5 spaces 1% * 5 => 5% From content width
+    95% available space
+    4 elements, the width is: 95% / 4
+Opacity 29:
+    opacity: 0.5; ==> transparency of the all element not only background.
+Position 30:
+    static => default
+    relative => move by itself (donot effect the other elements)
+             Syntax => position: relative;
+                       top: 20px; or right: 10px; or left or bottom 
+    absolute => make the element like is not exit (which mean the next element come
+                and set in its position)
+             => when we reposition, its position is towards his father.
+             => when you want to move element in his parent 
+                => you must set position: relative(for parent), absolute(for element)
+    fixed    => make the element in fixed position in the page when you scroll
+    sticky   => make the element in his position and if you scroll it is still in the page in position you want
+             => Syntax => position: sticky;
+                          top: 0; or (top: 0px; and right:10px;) choose what you want.
+Z-Index 31:
+    z-index => need to take position to use z-index.
+            => is arrangement the elements you want.
+                => if you do not arrange the elements they will show in default html arrangement.
+            => operate with values (z-index: 4; show over z-index: 3);
+List Styling 32:
+    to reset list
+        ->list-style: none;
+        ->padding left: 0px;
+Table Styling 33:
+Pseudo Classes 34:
+    element:hover {
+        make a change when you just stand on the element.
+    }
+    checkbox:checked {
+        make a change when you check the checkbox.
+    }
+    link:visited {
+        make a change when you visit the link.
+    }
+    div:empty {         (any div do not have children)  or p:empty or or .
+        make change
+    }
+    :empty {
+        make change on any empty element.
+    }
+    .in {       (make the input text with class="in")
+        border: 2px solid rgb(196, 217, 128);
+        border-radius: 4px;
+    }
+    .in:focus {     (when focus on the input text)
+        border-color: rgb(113, 8, 148);
+        outline: none;
+    }
+Pseudo Elements First Letter, First Line 35:
+    .three::first-line {        (set specification on first line)
+    color: green;
+    font-weight: bold;
+    }
+    .two::first-letter {        (set specification on first letter)
+    display: inline-block;
+    background-color: red;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    }
+    ::selection {           (when you select element(like text) what chang for this element)
+    color: yellowgreen;
+    background-color: black;
+    }
+Pseudo Elements Before, After, Content 36:
+    .one {
+        position: relative;
+    }
+    .one::before {
+        content: "";    (content that show before the element).
+        position: absolute;
+    }
+    .one::after {
+        position: absolute;
+    }
+Pseudo Elements Content & Training 37:
+    .parent {
+        counter-increment: members-count;
+    }
+    .child::after {
+        content: counter(members-count);
+    }
+    .one::before {      (show attrebute called "data-text" before element one)
+        content: attr(data-text);
+    }
+    ////in list//// you can set any shape with before for all (ul li)
+    ul {
+        list-style: none;
+    }
+    ul li {
+        position: relative;
+    }
+    ul li::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        margin-top: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent rgb(0, 136, 255) transparent transparent;
+    }
+Vendor Prefixes 38:
+    Chrome
+    safari
+    firefox
+    IE, Edge
+    opera
+
+    [1] New css feature appeared
+    [2] Browsers tests the feature in version X
+    [3] Browsers add prefix to give the developers the ability to use it
+    [4] the feature is fully supported in version y, No need for prefix
+
+    -webkit- => chrome, safari, new opera version
+    -moz- => firefox
+    -ms- => Ie, Edge
+    -o- => Old version of opera
+
+    .class {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    [1] Most of users is using modern Browsers
+    [2] Vs code addon to add the prefix
+    [3] Task Runner
+Border-radius 39:
+    border-radius: 50px 50px 10px 10px;
+Bow Shadows And Exambles 40:
+    Syntax: H-Shadow | V-Shadow | Blur | Spread | Color | Inset
+        box-shadow: 1px 1px 10px 0px #0000ff96;
+The box Model and box sizing 41:
+    box-sizing: content-box; (default value)
+    box-sizing: border-box;  (donot change in the width and height of element if it is defined)
+    
+    to use this feature on all Elements
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }        
+Transition 42:
+    Duration - Property - Delay - Timing Function
+    Property: select the properities that take delay and duration and other prop do the change in the time.
+    Property:all; make all properities take delay and duration and timing Function
+    transition-timing-function:ease (start slow then be fast and end slow)
+                              :linear (same speed)
+                              :ease-in (just start slow then be normal)
+                              :ease-out (just end slow, other be normal speed)
+                              :ease-in-out (slow in start and end, other be normal)
+    do all in one line:
+        transition: width 2s, height 2.5s,
+                    border-radius 2s, margin 1s;
+        default values
+            transition-behavior: normal, normal, normal, normal;
+            transition-duration: 2s, 2.5s, 2s, 1s;
+            transition-timing-function: ease, ease, ease, ease;
+            transition-delay: 0s, 0s, 0s, 0s;
+            transition-property: width, height, border-radius, margin;        
+        transition: all 0.5s 2s linear;
+            prop: all;
+            delay: 0.5s;
+            duration: 2s;
+            timing-function: linear;
+    examble:
+    .one {
+    background-color: #9fbe19 !important;
+    width: 200px;
+    height: 200px;
+    /*padding: 10px;
+    transition-duration: 1.7s;
+    transition-delay: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    */transition: all 0.5s 1ms linear;
+    }
+    .one:hover {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin: 20px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+Important declaration and use cases 43:
+    make the specific style overwrite all styles and declare others
+        <div class="one" style="background-color: red;"></div> ==> this is stronger
+        background-color: #9fbe19 !important;   (!important) make color #9fbe19
+The margin Collapse 44:
+    [1] Only Vertical Margins Collapse.
+    [2] Bigger Margin Win.
+    [3] Margin Collapsing With Elements Without Anything Between.
+    [4] Nesting Does Not Prevent Collapsing.
+Css Variables 45:
+    [1] variable names is sensitive.
+    [2] var(Variable_Name, Fallback Value).
+        Fallback value: appear if value do not exist.
+    [3] can do calculation on var padding: calc(20px + var(--mainpadding));
+    :root {
+        --variable-name: value;
+        }
+Flex_Box 46:
+    For Parent
+    - display: flex;  ==> to start flexible box
+    - flex-direction: row;  ==> default value, walk in a row as a page language (en: from left to right)
+                      row-reverse;
+                      column
+                      column-reverse
+    - flex-wrap: nowrap (default)
+                 wrap   (end line if size not enough in line)
+                 wrap-reverse
+    - flex-flow: (flex-direction) + (flex-wrap)
+Flex_Box -parent
+    Justify content 47:
+        justify-content: flex-start   ==> default value
+                        : flex-end
+                        : center        (make elements in center horizontaly)
+                        : space-between    (elements)
+                        : space-around     (space before and after the element)
+                        : space-evenly     (space around and between)
+    Align Items 48:
+        - align-items: stretch  ==> (default value)
+                    : flex-start
+                    : flex-end
+                    : center       (make elements in center verticaly)
+    Align Content 49:
+        - align-content: stretch    ==> (default value)     ==> (operate with all content not one item)
+                    : flex-start
+                    : flex-end
+                    : center
+                    : space-between    
+                    : space-around     
+                    : space-evenly 
+Flex_Box -child 
+    Grow, Shrink, Order 50:
+        For Child
+            - flex-grow: 0; ==> (default value)
+                    : 1; ==> (can grow to fit his place)
+                    : 3;  if     (this for one element)  let this element possibility to grow 3times bigger
+                                                            than other elements, if there is a space.
+            - flex-shrink: 1;  ==> Default value
+            - order: 0; Default Value
+    Flex-Basis, Flex Shorthand 51:
+        - flex-basis: 300px;    ==> make element 300px in the direction (width or height)
+                                ==> Respect max width
+        - flex: [flex grow] [flex shrink] [flex basis] ==> default= 0 1 auto
+        - display: inline-flex;
+    Align Self, Games, Task 52:
+        align self: auto;   ==> default value
+Filters 54:
+    filter: grayscale(10%);
+    filter: blur(4px);
+    filter: invert(100%);
+gradiant 55:
+    linear_gradient(Direction || Angle, color stop 1, color stop 2,...)
+    background-image: linear-gradient(to right, red 10%, green 10%, green 20%, blue 20%, blue 30%,
+    #9c27b0 30%, #9c27b0 40%, #e72a69 40%, #e72a69 50%, #43a047 50%, #43a047 60%, #f44336 60%, #f44336 70%,
+    #ffc107 70%, #ffc107 80%, #2196f3 80%, #2196f3 90%, #00acc1 90%);
+Pointer Events and Carot Color 56:
+    html: <p contenteditable="true">  // to can select and pointer show when i click on the paragraph.
+    css:  caret-color: red;           // make cursor color red.
+    pointer-events: 
+
+                                    # GRID #
+Parent:
+    display: grid | inline-grid;
+    grid-template-columns => [Number of columns In] => [Px, %, Fraction, Repeat(), Mix]
+    grid-template-rows => [Number of rows Height In] => [Px, %, Fraction, Repeat(), Mix]
+    gap: [Row Gap] [Column Gap];
+    justify-content
+    align-content
+    grid-template-areas
+Child:
+    grid-column: [Grid column start] / [Grid col end]
+    grid-row: [Grid row start] [Grid row end]
+    grid-area: [Grid row start] [Grid column start] [Grid row end] [Grid column end]
+    grid-column: span [number of columns]
+    grid-column: [Grid column start] / span [number of columns]
+
+
+Grid Parent
+Template Columns 57:
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: => [Numbers of columns in] => [Px, %, auto, fr, repeat(), Mix]
+        - grid-template-columns: => repeat(number of columns, width for each col)
+        difference bet fraction(fr) and (auto)
+            - auto is shy (if he has all width, 
+            he will take, else he will take minimum width to can show
+            (based on the content he has if he has one char("a" or "akjdfsaflk")
+            - fr: take the percent of content. if there is (fr, auto) in same grid, 
+            auto take minimum, (fr has all - auto)
+Template Rows and Gap 58:
+    - grid-template-rows: => [Numbers of rows in] => [Px, %, auto, fr, repeat(), Mix]
+    - row-gap: 10px;
+    - column-gap: 10px;
+    Or gap: [Row Gap] [Column Gap];
+Justify and Align Content 59:
+    justify-content: space-between; 
+    align-content: space-between;
+Full Layout With Grid Template Areas 60:
+    grid-template-areas: 
+        "logo logo nav nav nav nav nav nav nav nav" 
+        "cont cont cont cont cont cont cont cont side side"
+        "foot foot foot foot foot foot foot foot foot foot";    ["for first row"] ["for second row"]
+    h2 {
+    grid-area: logo;
+    background-color: red;
+    color: white;
+    }
+    nav {
+        grid-area: nav;
+        background-color: blue;
+        color: white;
+    }
+
+    section {
+        grid-area: cont;
+        background-color: yellow;
+        color: white;
+    }
+    aside {
+        grid-area: side;
+        background-color: green;
+        color: white;
+    }
+
+    footer {
+        grid-area: foot;
+        background-color: black;
+        color: white;
+    }
+Grid Child Column and Row 61:
+    grid-column: [start column] [end column(not enclusive)] if 1 5  => from col 1 to 4 (1,2,3,4)only.
+    grid-column: [st col] / [end col];
+    grid-column: [st col] / number of column that will take;
+    grid-column: number of column whill take;
+    << grid-row: is same. >>
+Grid Child Area And Trainings 62:
+    grid-area: [grid row start] [grid column start] [grid row end] [grid column end]
+    grid-template-areas: "head head nav nav nav" "cont cont cont cont cont";    ==> 2rows & 5columns
+Grid
+MinMax and Auto-Fill 63:
+
+                                        2D Transform
+Scale 65:
+    transform: scale(scaleX, scaleY);
+               scaleX();
+               scaleY();
+Rotate 66:
+    deg => Degree
+    rad => Radian
+    grad => Gradians
+    turn => turn
+Translate 67:
+    translate(x-axis, y-axis);
+Skew 68:
+    transform: skew(x-axis, y-axis);
+    transform: skewX(x-axis);
+    transform: skewY(y-axis);
+Matrix 69:                      (if you have enough time search about matrix)
+    Syntax => matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY());
+    the order of function in matrix is ==> translate is the first operation happen.
+    if you want to get the same detail with matrix and use the everyone alone.
+        transform: matrix(1.2, 0.2679, 0, 1.2, 20, 20);
+        transform: translateX(20px) translateY(20px) scaleX(1.2) skewY(15deg) skewX(0deg) scaleY(1.2);
+Origin 70:
+    Default_Value => 50% 50% 0
+    2D Transform => transform-origin(X, Y)
+    3D Transform => transform-origin(X, Y, Z)
+    X-Axis
+    - CSS Units
+    - %
+    - Keywords
+        - left = 0%
+        - center = 50%
+        - right = 100%
+    Y-Axis
+        - CSS Units
+        - %
+        - Keywords
+            - top = 0%
+            - center = 50%
+            - bottom = 100%
+
+                                3D transform
+Rotate & Trainings 71:
+    transform: rotateX, rotateY, rotateZ.
+    transform: rotate3d(x-axis, y-axis, z-axis, rotate_value);
+Translate - Perspective + Origin 72:
+    in parent:
+        perspective: 300px;     (prespective value)
+        perspective-origin: center center;      (prespective location)
+    in child:
+        transform: translate3d(x-axis, y-axis, z-axis);
+        transform: translate3d(0, 0, 100px);
+        -webkit-transform: translate3d(0, 0, 100px);
+        -moz-transform: translate3d(0, 0, 100px);
+        -ms-transform: translate3d(0, 0, 100px);
+        -o-transform: translate3d(0, 0, 100px);
+Backface Visibility And Flip Product 73:
+    In parent:
+        transform-style: preserve-3d;       (make the element save his location)
+
+Animation
+Keyframes, Name, Duration 74:
+    // animation name and his details
+    @keyframes change-color {
+        0% {
+            background-color: red;
+        }
+        50% {
+            background-color: blue;
+        }
+        100% {
+            background-color: aliceblue;
+            color: black;
+        }
+    }
+    // how to do it in specific element
+    .anime:hover {
+        animation-name: change-color;
+        animation-duration: 3s;
+    }
+Iteration count, timing function 75,76:
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;    normal or reverse or alternate or alternate-reverse
+    alternate   ==> means (element walk forward then back in the duration)
+
+    animation-fill-mode: 
+                        forwards:  make style like last keyframes
+                        backwards: make style like first keyframes
+                        both: if you reach for last keyframe he will take and stop on it.
+    Shorthand
+        animation: coloring 3s linear 2s infinite reverse;
+        use it when you want to use all animation tools.
+Up and Down Animation Trainings 77:
+
+                                            Selectors
+Selectors Refrence part1 78:
+    CSS Selectors
+    - *
+    - Element => [p, div, h2]
+    - Element OtherElements => div p
+    - .class-name
+    - #id-name
+    - .parent .child    (not must be direct child)
+        <div class="parent">
+            <div>
+                <div class="child"></div>
+            </div>
+        </div>
+    - .class-one.class-two
+    - .class-name div
+    - .class-name div,
+     .class-name p          (Grouping)
+    - Element.class-name        (target this element)  p.class-name
+    - .parent > .child  (direct child)  
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+Selectors Refrence part2 79:
+    - (next selector)   Element + Other Element (div + p) p must be direct after div, if there is a space with any other element not div, this won't be access.
+        <div class="div"></div>
+        <p>Paragraph</p>
+    - Element ~ Other Elements  (div ~ p)   (must be div before p)
+        <div class="div"></div>
+        <span></span>
+        <p>Paragraph</p>                        Access is correct
+        <p>para</p>                             Access is correct
+    - [Attribute]   => [title]      => any element with attribute title
+    - Element[Attribute]  => div[title]    any div with attribute title
+    - [Attribute = Value]
+    - Element[Attribute = Value]    => input[type="submit"]
+    - [Attribute~=Value] => Contains a word = Value     (must be a word not a piece of word)
+    - [Attribute*=Value] => Contains a string = Value
+    - [Attribute^=Value] => start with a string = Value
+Selectors Refrence part3 80:
+    - :first-child      => p:first-child {
+                                color: red;
+                            }
+    - :last-child       => p:last-child {
+                                color: blue;
+                            }
+    - :first-of-type    => p:first-of-type {
+                                color: yellow;
+                            }
+    - :last-of-type    => p:last-of-type {
+                                color: yellow;
+                            }
+    - :only-child
+    - :only-of-type         (is just one from his type)
+Selectors Refrence part4 81:
+    - :not(Selectors)
+            p:first-child;
+            p:not(first-child)
+    - :nth-child(n)
+        :nth-child(2)
+        :nth-child(even)
+        :nth-child(odd)
+    - :nth-last-child(2)     count from last
+    - :nth-of-type(n)
+        p:nth-of-type(3)         paragraph number 3
+    - :nth-last-of-type(n)       count from last
+Selectors Refrence part5 82:
+    - :root
+    - :checked
+    - :empty
+    - :disabled
+    - :required
+    - :focus
+    - ::selection
+    - ::placeholder
+
+                                            Media Queries And Responsive
+Intro 83:
+    @media condition {
+        elements classification
+    }
+    @media condition and condition {
+
+    }
+Standards 84:
+    you can use many css files in your app, but with condition
+        <link rel="stylesheet" href="CSS/print.css" media = "(min-width: 500px) and (max-width: 1000px)" />
+    or
+        <link rel="stylesheet" href="CSS/print.css" media = "print" />
+Practice 85:
+
+Create Your Framework 86:
+    In CSS
+        .center-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    In html
+        <div class="one center-flex">1</div>
+        <div class="two center-flex">2</div>
+Global Values 87:
+    Inherit
+        color, font-size, font-weight
+    Initial     => get default value
+    Unset       => get inherit for Inheritance specification
+                => get initial for Uninheritance 
+    revert
+
+    display: default value(inline)
+        user agent(browsers) give div and other elements (its value like block)
+    
+    can control of all specification
+        all: unset;
+
+The End And How To Master HTML & CSS 88:
+    - 4 Practical Designs
+    - Html & Css Tutorial
+        - cssbattle
+        - Frontend Mentor
+        - Git & Github
+        - Elzero Challenges
+        - CodePen
+        - Practice Pranctice Practicef

@@ -1,0 +1,72 @@
+/* 
+    Media Queries
+    Responsive Design
+        - Concept Of Width
+        - Mobile
+        - Small Screens
+        - Medium Screens
+        - Large Screens
+        - Future Updates 
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.parent div {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    
+}
+
+/* Small Screens */
+
+@media (min-width: 768px) {
+    .parent div {
+        width: calc(50% - 5px);
+    }
+}
+
+/* Medium Screens : overwrite on media(Small Screens) */
+
+@media (min-width: 992px) {
+    .parent div {
+        width: calc(33% - 5px);
+    }
+}
+
+/* Large Screens : overwrite on media(Medium Screens) */
+
+@media (min-width: 1200px) {
+    .parent div {
+        width: calc(25% - 5px);
+    }
+}
+
+/* Custom Media for Screens {0:1199px}*/
+
+@media (max-width: 1199px) {
+
+}

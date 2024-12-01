@@ -1,0 +1,245 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 3000px;
+}
+
+.a1 {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    margin: 10px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 49% 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    color: #ec6337;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 0 0 0 #4ba6ee, 5px 0 0 0 #ec6337;
+    font-size: 20px;
+}
+
+.parent2 {
+    width: 600px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.parent2 div {
+    width: calc(95% / 3);
+    background-color: #e15241;
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent3 {
+    width: 600px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.parent3 div {
+    background-color: #667c89;
+    color: white;
+    width: calc(95% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent3 .six,
+.parent3 .five {
+    height: 50%;
+}
+.parent3 .six {
+    order: 1;
+}
+.parent3 .three {
+    order: 2;
+    height: 40px;
+}
+.parent3 .four {
+    order: 3;
+}
+.parent3 .five {
+    order: 4;
+}
+.parent3 .two {
+    order: 5;
+}
+.parent3 .one {
+    order: 6;
+    height: 40px;
+    align-self: flex-end;
+}
+
+.parent4 {
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.parent4 div {
+    background-color: #429488;
+    height: calc(95% / 3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent4 .one {
+    width: 35px;
+    align-self: flex-end;
+}
+.parent4 .two {
+    width: 55%;
+}
+.parent4 .three {
+    width: 35px;
+    align-self: flex-end;
+}
+
+.parent5 {
+    width: 600px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+}
+.parent5 div {
+    background-color: rebeccapurple;
+    color: white;
+    display: flex;
+    width: 100px;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.parent5 .one {
+    order: 1;
+    margin-left: 166px;
+    background-color: #f19d38;
+}
+.parent5 .three {
+    order: 2;
+    margin-left: 214px;
+    background-color: #74564a;
+}
+.parent5 .four {
+    order: 3;
+    background-color: #613cb0;
+}
+.parent5 .two {
+    order: 4;
+    margin-left: 230px;
+    background-color: #97c15c;
+}
+
+:root {
+    --page-width: 80%;
+    --element-color: #dddddd;
+    --element-padding: 10px;
+    --hei: 10%;
+    --log_wid: 9%;
+    --cont-wid: 64%;
+}
+.page {
+    background-color: #eee;
+    width: var(--page-width);
+    height: calc(var(--page-width) / 4);
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
+header {
+    width: 100%;
+    height: var(--hei);
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: var(--log_wid);
+    height: 100%;
+    background-color: var(--element-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .links {
+    list-style: none;
+    padding: var(--element-padding);
+    margin: 0px;
+    width: calc(99% - var(--log_wid));
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--element-color);
+}
+header .links li {
+    padding: var(--element-padding);
+}
+
+main {
+    width: 100%;
+    height: calc(96% - 2*var(--hei));
+    display: flex;
+    justify-content: space-between;
+}
+content,
+sidebar {
+    display: flex;
+    padding: var(--element-padding);
+}
+main content {
+    width: var(--cont-wid);
+    background-color: var(--element-color);
+}
+main sidebar {
+    width: calc(99% - var(--cont-wid));
+    background-color: var(--element-color);
+}
+
+footer {
+    display: flex;
+    padding: var(--element-padding);
+    width: 100%;
+    height: var(--hei);
+    background-color: var(--element-color);
+    align-items: center;
+}
+footer .copyright,
+footer .design {
+    display: flex;
+    width: 50%;
+}
+footer .design {
+    justify-content: flex-end;
+}

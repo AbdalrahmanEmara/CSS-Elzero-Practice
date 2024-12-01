@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="checkbox"]:checked + label {
+    color: red;
+}
+form span {
+    position: relative;
+}
+span::before {
+    content: "**";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+input:required + span::before {
+    color: red;
+}
+
+div:empty {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+div::selection {
+    background-color: black;
+    color: white;
+}
+::placeholder {
+    color: red;
+}

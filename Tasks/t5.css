@@ -1,0 +1,59 @@
+.a1 {
+    font-style: normal;
+    text-shadow: 0.5px 0.5px 0 red,
+    1px 1px 0 hsla(240, 100%, 50%, 0.823),
+    1.5px 1.5px 0 rebeccapurple;
+    background-color: #eee;
+    width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 25px;
+}
+.a2 {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+.a2 p {
+    padding: 10px;
+    background-color: #eee;
+}
+.one {
+    text-transform: uppercase;
+    
+}
+.two {
+    text-transform: capitalize;
+}
+.three {
+    text-transform: lowercase;
+}
+.a3 div {
+    background-color: #eee;
+    padding: 20px;
+    width: 330px;
+    margin: 20px auto;
+}
+.p1 {
+    word-break: break-word;
+}
+.p3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.a4 {
+    background-color: #07a2a7;
+    padding: 7px 12px;
+    margin: 20px auto;
+    width: fit-content;
+    border-bottom: 5px solid #025457;
+}
+.a4 a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: arial;
+    font-weight: bold;
+}

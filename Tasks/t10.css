@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 3000px;
+}
+.a1 {
+    overflow: hidden;
+    width: 600px;
+    margin: 20px auto;
+}
+.a1 div {
+    position: relative;
+    counter-increment: count-num;
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: #eee;
+    font-size: 20px;
+    padding: 10px;
+    margin: 30px;
+    border: 3px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 6px 5px 0px 0px blue, -6px -5px 0px 0px #e91e63;
+}
+.a1 div::before {
+    content: counter(count-num);
+    position: absolute;
+    float: left;
+    top: -16px;
+    right: 46px;
+    background-color: black;
+    padding: 10px;
+    line-height: 7px;
+    border-radius: 50%;
+    color: white;
+    font-size: 17px;
+}
+.a2 {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: #efefef;
+    box-shadow: 0px 0px 0px 0px #ccc;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 9px 23px;
+    border-top-left-radius: 9px 23px;
+    box-shadow: inset 0px 0px 6px 3px #6c6c6c;
+}
+.parent {
+    width: 550px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.f1,
+.f2 {
+    width: calc((100% - 80px) / 2);
+    height: 300px;
+    background-color: #eeeeee;
+    float: left;
+    margin: 20px;
+}
+.e1,
+.e2 {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 190px;
+    position: relative;
+    border-radius: 50%;
+    margin: 20px auto;
+    font-size: 30px;
+    display: inline-block;
+    top: 61px;
+    left: 20px;
+}
+.e1::before {
+    content: "Basic";
+}
+.e1::after {
+    content: "Or";
+    background-color: #03a9f4;
+    position: absolute;
+    float: left;
+    height: 23px;
+    width: 23px;
+    line-height: 2;
+    border-radius: 50%;
+    font-size: 12px;
+    top: 27%;
+    right: -46px;
+    color: white;
+    font-weight: bold;
+}
+.e2::before {
+    content: "";
+    width: 1px;
+    background-color: #03a9f4;
+    position: absolute;
+    float: left;
+    display: inline-block;
+    height: 150%;
+    top: -81px;
+    left: -41px;
+    z-index: -1;
+}
+.e2::after {
+    content: "Pro";
+}
+.e1::before,
+.e2::after {
+    font-size: 20px;
+    display: inline-block;
+    font-weight: bold;
+    background-color: #03a9f4;
+    width: 200px;
+    float: left;
+    position: absolute;
+    top: -66px;
+    right: 0;
+    line-height: 40px;
+    border-radius: 6px;
+    color: white;
+}
+.par {
+    width: 550px;
+    margin: 20px auto;
+    padding: 10px;
+}
+.child1,
+.child2 {
+    width: 215px;
+    height: 300px;
+    background-color: #eee;
+    float: left;
+    padding: 10px;
+    margin: 20px;
+    position: relative;
+}
+.ch1 {
+    background-color: #03a9f4;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
+.ch2 {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 86px;
+    right: 18px;
+}
+.ch2::before {
+    content: attr(data-text);
+    position: absolute;
+    font-size: 30px;
+    top: 78px;
+    right: 73px;
+}
+.child1::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #4ba6ee;
+    height: 100%;
+    top: 0px;
+    right: -20px;
+    z-index: -1;
+}
+.Or {
+    float: left;
+    padding: 6px;
+    background-color: #4ba6ee;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 133px;
+    right: -35px;
+}

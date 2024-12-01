@@ -1,0 +1,3 @@
+./ refers to the current directory.
+../ moves moves up one directory level.
+

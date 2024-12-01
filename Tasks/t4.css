@@ -1,0 +1,21 @@
+.title,
+.parent p {
+    color: green;
+}
+.parent .child .title {
+    color: red;
+}
+.parent .title {
+    color: blue;
+}
+.Task2 p {
+    padding: 10px;
+    margin: 20px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    width: fit-content;
+    max-width: 400px;
+    max-height: 30px;
+    overflow: hidden;
+}
