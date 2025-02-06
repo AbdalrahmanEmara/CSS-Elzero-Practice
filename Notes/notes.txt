@@ -410,10 +410,17 @@ Filters 54:
     filter: blur(4px);
     filter: invert(100%);
 gradiant 55:
-    linear_gradient(Direction || Angle, color stop 1, color stop 2,...)
-    background-image: linear-gradient(to right, red 10%, green 10%, green 20%, blue 20%, blue 30%,
-    #9c27b0 30%, #9c27b0 40%, #e72a69 40%, #e72a69 50%, #43a047 50%, #43a047 60%, #f44336 60%, #f44336 70%,
-    #ffc107 70%, #ffc107 80%, #2196f3 80%, #2196f3 90%, #00acc1 90%);
+    Linear Gradients (goes down/up/left/right/diagonally)
+    Radial Gradients (defined by their center)
+    Conic Gradients (rotated around a center point)
+    -linear_gradient(Direction || Angle, color stop 1, color stop 2,...)
+        background-image: linear-gradient(to right, red 10%, green 10%, green 20%, blue 20%, blue 30%,
+        #9c27b0 30%, #9c27b0 40%, #e72a69 40%, #e72a69 50%, #43a047 50%, #43a047 60%, #f44336 60%, #f44336 70%,
+        #ffc107 70%, #ffc107 80%, #2196f3 80%, #2196f3 90%, #00acc1 90%);
+    -radial-gradient(circle at bottom left , red 5%, blue 10%);
+    -conic-gradient(red, yello, green) and add percent after each color.
+-->repeating-linear_gradient: (Direction || Angle, color stop 1, color stop 2,...)
+
 Pointer Events and Carot Color 56:
     html: <p contenteditable="true">  // to can select and pointer show when i click on the paragraph.
     css:  caret-color: red;           // make cursor color red.
